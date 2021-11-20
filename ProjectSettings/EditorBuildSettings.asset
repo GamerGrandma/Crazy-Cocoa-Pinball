@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/ModTheCube/Scene.unity
+    path: 
     guid: 0837f2ea600db39419ef0a366d70b9de
+  - enabled: 1
+    path: Assets/3DJumperPieces/Scenes/Title scene.unity
+    guid: dfd5b47e758710d4f997a10a10f6c325
+  - enabled: 1
+    path: Assets/3DJumperPieces/Scenes/FroggerScene.unity
+    guid: fa71d262a23c87941b1cdaa17d501e47
   m_configObjects: {}
