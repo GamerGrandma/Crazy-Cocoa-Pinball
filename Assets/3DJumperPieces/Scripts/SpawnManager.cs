@@ -25,15 +25,20 @@ public class SpawnManager : MonoBehaviour
     public float minSpeed = 4f;
     public float maxSpeed = 4f;
     public float speed = 1f;
-
+    private float leftBound = 22f;
+    private float rightBound = -22f;
+    public GameObject floater;
+    
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
+        floater = ObjectPool.SharedInstance.GetPooledObject();
     }
 
     void Update()
     {
         AddPlayer();
+        //SetToInactiveState();
     }
     //each spawn row moves opposite direction
     //also each spawn row sometimes has point or life that spawns with object
@@ -43,7 +48,15 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos1 = new Vector3(20, 0, 4);
         Vector3 spawnBonus1 = new Vector3(20, 1, 4);
         int floaterIndex = Random.Range(0, floatingObstaclesA.Length);
-        Instantiate(floatingObstaclesA[floaterIndex], spawnPos1, floatingObstaclesA[floaterIndex].transform.rotation);
+        //Instantiate(floatingObstaclesA[floaterIndex], spawnPos1, floatingObstaclesA[floaterIndex].transform.rotation);
+        
+        if (floater != null)
+        {
+            floater.transform.position = spawnPos1;
+            floater.transform.rotation = floater.transform.rotation;
+            floater.SetActive(true);
+            
+        }
         if (canAddBonus == 1)
         {
             ChooseRandomBonus(spawnBonus1);
@@ -163,4 +176,15 @@ public class SpawnManager : MonoBehaviour
         int bonusIndex = Random.Range(0, bonusObject.Length);
         Instantiate(bonusObjectB[bonusIndex], spawnHere, bonusObjectB[bonusIndex].transform.rotation);
     }
+    /*public void SetToInactiveState()
+    {
+        if (transform.position.x > 22f)
+        {
+            floater.SetActive(false);
+        }
+        else if (transform.position.x < -22f)
+        {
+            floater.SetActive(false);
+        }
+    }*/
 }

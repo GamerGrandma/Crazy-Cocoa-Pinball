@@ -10,12 +10,16 @@ public class FloatingMovers : MonoBehaviour
     private float leftBound = 22f;
     private float rightBound = -22f;
     public SpawnManager spawnManager;
+    public ObjectPool objectPooler;
+    public GameObject floater;
 
     void Start()
     {
         //speed = Random.Range(minSpeed, maxSpeed);
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
+        objectPooler = GameObject.Find("Spawner").GetComponent<ObjectPool>();
         moveSpeed = spawnManager.speed;
+        floater = ObjectPool.SharedInstance.GetPooledObject();
     }
     
     void Update()
@@ -23,12 +27,13 @@ public class FloatingMovers : MonoBehaviour
         transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
         if(transform.position.x > leftBound)
         {
-            Destroy(gameObject);
+           floater.SetActive(false);
         }
-        else if (transform.position.x < rightBound)
+        /*else if (transform.position.x < rightBound)
         {
-            Destroy(gameObject);
-        }
+            this.SetActive(false);
+        }*/
+        
     }
     void OnTriggerEnter(Collider other)
     {
