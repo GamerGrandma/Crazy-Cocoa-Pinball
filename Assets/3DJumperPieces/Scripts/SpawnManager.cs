@@ -52,9 +52,10 @@ public class SpawnManager : MonoBehaviour
         
         if (floater != null)
         {
+            floater.SetActive(true);
             floater.transform.position = spawnPos1;
             floater.transform.rotation = floater.transform.rotation;
-            floater.SetActive(true);
+            //floater.SetActive(true);
             
         }
         if (canAddBonus == 1)

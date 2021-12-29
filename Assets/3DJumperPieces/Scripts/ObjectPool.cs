@@ -5,10 +5,12 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool SharedInstance;
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
+    public List<GameObject> pooledObjects;//pooledAlligators
+    public GameObject objectToPool;//alligators
     public int amountToPool;
-
+    //pooledLogs
+    //logs
+    //same for bonus objects
     void Awake()
     {
         SharedInstance = this;
@@ -28,7 +30,8 @@ public class ObjectPool : MonoBehaviour
     {
         
     }
-    
+    //method for shoosing random floater to activate
+    //method for choosing random bonus object
     public GameObject GetPooledObject()
     {
         for (int i = 0; i < amountToPool; i++)

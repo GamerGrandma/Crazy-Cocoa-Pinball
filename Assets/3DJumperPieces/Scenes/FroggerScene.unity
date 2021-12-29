@@ -1850,6 +1850,7 @@ MonoBehaviour:
   minSpeed: 4
   maxSpeed: 4
   speed: 1
+  floater: {fileID: 0}
 --- !u!4 &1848444896
 Transform:
   m_ObjectHideFlags: 0
