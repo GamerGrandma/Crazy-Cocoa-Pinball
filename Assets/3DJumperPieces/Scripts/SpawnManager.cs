@@ -27,12 +27,12 @@ public class SpawnManager : MonoBehaviour
     public float speed = 1f;
     private float leftBound = 22f;
     private float rightBound = -22f;
-    public GameObject floater;
+    public ObjectPool floaterPool;
     
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
-        floater = ObjectPool.SharedInstance.GetPooledObject();
+        //floater = ObjectPool.SharedInstance.GetPooledObject();
     }
 
     void Update()
@@ -49,15 +49,15 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnBonus1 = new Vector3(20, 1, 4);
         int floaterIndex = Random.Range(0, floatingObstaclesA.Length);
         //Instantiate(floatingObstaclesA[floaterIndex], spawnPos1, floatingObstaclesA[floaterIndex].transform.rotation);
-        
-        if (floater != null)
+        floaterPool.SpawnObject(spawnPos1);
+        /*if (floater != null)
         {
             floater.SetActive(true);
             floater.transform.position = spawnPos1;
             floater.transform.rotation = floater.transform.rotation;
-            //floater.SetActive(true);
+            floater.SetActive(true);
             
-        }
+        }*/
         if (canAddBonus == 1)
         {
             ChooseRandomBonus(spawnBonus1);

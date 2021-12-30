@@ -19,7 +19,7 @@ public class FloatingMovers : MonoBehaviour
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
         objectPooler = GameObject.Find("Spawner").GetComponent<ObjectPool>();
         moveSpeed = spawnManager.speed;
-        floater = ObjectPool.SharedInstance.GetPooledObject();
+        //floater = ObjectPool.SharedInstance.GetPooledObject();
     }
     
     void Update()
@@ -27,7 +27,7 @@ public class FloatingMovers : MonoBehaviour
         transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
         if(transform.position.x > leftBound)
         {
-           floater.SetActive(false);
+          // floater.SetActive(false);
         }
         /*else if (transform.position.x < rightBound)
         {
