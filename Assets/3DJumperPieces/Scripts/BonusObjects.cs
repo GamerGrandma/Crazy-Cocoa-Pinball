@@ -7,8 +7,8 @@ public class BonusObjects : MonoBehaviour
     public float minSpeed = 3f;
     public float maxSpeed = 6f;
     public float moveSpeed = 7f;
-    private float leftBound = 22f;
-    private float rightBound = -22f;
+    private float leftBound = 28f;
+    private float rightBound = -28f;
     public SpawnManager spawnManager;
     public int pointsToAdd;
     public bool addPoints = false;

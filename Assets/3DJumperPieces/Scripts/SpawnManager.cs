@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject playerPrefab;
-    public GameObject[] floatingObstaclesA;
-    public GameObject[] floatingObstaclesB;
     public GameObject[] bonusObject;
     public GameObject[] bonusObjectB;
     public GameObject titleScreen;
@@ -25,39 +23,25 @@ public class SpawnManager : MonoBehaviour
     public float minSpeed = 4f;
     public float maxSpeed = 4f;
     public float speed = 1f;
-    private float leftBound = 22f;
-    private float rightBound = -22f;
     public ObjectPool floaterPool;
     
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
-        //floater = ObjectPool.SharedInstance.GetPooledObject();
     }
 
     void Update()
     {
         AddPlayer();
-        //SetToInactiveState();
     }
     //each spawn row moves opposite direction
     //also each spawn row sometimes has point or life that spawns with object
     void SpawnRowOne()
     {
         int canAddBonus = Random.Range(0, 2);
-        Vector3 spawnPos1 = new Vector3(20, 0, 4);
-        Vector3 spawnBonus1 = new Vector3(20, 1, 4);
-        int floaterIndex = Random.Range(0, floatingObstaclesA.Length);
-        //Instantiate(floatingObstaclesA[floaterIndex], spawnPos1, floatingObstaclesA[floaterIndex].transform.rotation);
+        Vector3 spawnPos1 = new Vector3(24, 0, 4);
+        Vector3 spawnBonus1 = new Vector3(24, 1, 4);
         floaterPool.SpawnObject(spawnPos1);
-        /*if (floater != null)
-        {
-            floater.SetActive(true);
-            floater.transform.position = spawnPos1;
-            floater.transform.rotation = floater.transform.rotation;
-            floater.SetActive(true);
-            
-        }*/
         if (canAddBonus == 1)
         {
             ChooseRandomBonus(spawnBonus1);
@@ -65,22 +49,20 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnRowTwo()
     {
-        Vector3 spawnPos2 = new Vector3(-20, 0, 2);
-        Vector3 spawnBonus2 = new Vector3(-20, 1, 2);
-        int floaterIndex = Random.Range(0, floatingObstaclesB.Length);
-        Instantiate(floatingObstaclesB[floaterIndex], spawnPos2, floatingObstaclesB[floaterIndex].transform.rotation);
+        Vector3 spawnPos2 = new Vector3(25, 0, 2);
+        Vector3 spawnBonus2 = new Vector3(25, 1, 2);
+        floaterPool.SpawnObject(spawnPos2);
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonusRight(spawnBonus2);
+            ChooseRandomBonus(spawnBonus2);
         }
     }
     void SpawnRowThree()
     {
-        Vector3 spawnPos3 = new Vector3(20, 0, 0);
-        Vector3 spawnBonus3 = new Vector3(20, 1, 0);
-        int floaterIndex = Random.Range(0, floatingObstaclesA.Length);
-        Instantiate(floatingObstaclesA[floaterIndex], spawnPos3, floatingObstaclesA[floaterIndex].transform.rotation);
+        Vector3 spawnPos3 = new Vector3(23, 0, 0);
+        Vector3 spawnBonus3 = new Vector3(23, 1, 0);
+        floaterPool.SpawnObject(spawnPos3);
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
@@ -89,22 +71,20 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnRowFour()
     {
-        Vector3 spawnPos4 = new Vector3(-20, 0, -2);
-        Vector3 spawnBonus4 = new Vector3(-20, 1, -2);
-        int floaterIndex = Random.Range(0, floatingObstaclesB.Length);
-        Instantiate(floatingObstaclesB[floaterIndex], spawnPos4, floatingObstaclesB[floaterIndex].transform.rotation);
+        Vector3 spawnPos4 = new Vector3(24, 0, -2);
+        Vector3 spawnBonus4 = new Vector3(24, 1, -2);
+        floaterPool.SpawnObject(spawnPos4);
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonusRight(spawnBonus4);
+            ChooseRandomBonus(spawnBonus4);
         }
     }
     void SpawnRowFive()
     {
-        Vector3 spawnPos5 = new Vector3(20, 0,-4);
-        Vector3 spawnBonus5 = new Vector3(20, 1,-4);
-        int floaterIndex = Random.Range(0, floatingObstaclesA.Length);
-        Instantiate(floatingObstaclesA[floaterIndex], spawnPos5, floatingObstaclesA[floaterIndex].transform.rotation);
+        Vector3 spawnPos5 = new Vector3(26, 0,-4);
+        Vector3 spawnBonus5 = new Vector3(26, 1,-4);
+        floaterPool.SpawnObject(spawnPos5);
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
@@ -177,15 +157,4 @@ public class SpawnManager : MonoBehaviour
         int bonusIndex = Random.Range(0, bonusObject.Length);
         Instantiate(bonusObjectB[bonusIndex], spawnHere, bonusObjectB[bonusIndex].transform.rotation);
     }
-    /*public void SetToInactiveState()
-    {
-        if (transform.position.x > 22f)
-        {
-            floater.SetActive(false);
-        }
-        else if (transform.position.x < -22f)
-        {
-            floater.SetActive(false);
-        }
-    }*/
 }

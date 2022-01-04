@@ -722,6 +722,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnManager: {fileID: 0}
   difficulty: 2
+--- !u!1 &383293440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383293442}
+  - component: {fileID: 383293441}
+  - component: {fileID: 383293443}
+  m_Layer: 0
+  m_Name: Left Boundary Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &383293441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383293440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &383293442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383293440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383293443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383293440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ec3e9d8d5ef24e8007135f14afb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443370766
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +969,9 @@ MonoBehaviour:
   pooledObjects: []
   objectToPool: {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543,
     type: 3}
-  amountToPool: 10
+  amountToPool: 50
+  bonusToPool: {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732,
+    type: 3}
 --- !u!4 &622824050
 Transform:
   m_ObjectHideFlags: 0
@@ -1850,7 +1909,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1848444896}
   - component: {fileID: 1848444895}
-  - component: {fileID: 1848444897}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1872,12 +1930,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3804185849962138333, guid: 43607cd3a818c784782480db22f980ee,
     type: 3}
-  floatingObstaclesA:
-  - {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543, type: 3}
-  - {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5, type: 3}
-  floatingObstaclesB:
-  - {fileID: 2284939785691763319, guid: d53f8788f5db9814980c2fb930c1bc66, type: 3}
-  - {fileID: 9217342586468866318, guid: b53c6978af56b704e86fad90382b6918, type: 3}
   bonusObject:
   - {fileID: 8789025689449529462, guid: c8d9de7016086e847a55bd709ce25aa0, type: 3}
   - {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732, type: 3}
@@ -1912,22 +1964,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1848444897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848444894}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42fd257333c2ef4d83c0de1e2675a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObjects: []
-  objectToPool: {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543,
-    type: 3}
-  amountToPool: 10
 --- !u!1 &1905321711
 GameObject:
   m_ObjectHideFlags: 0
