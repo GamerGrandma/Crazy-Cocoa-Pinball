@@ -1164,6 +1164,58 @@ Transform:
   m_Father: {fileID: 43205559}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &894808894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894808896}
+  - component: {fileID: 894808895}
+  m_Layer: 0
+  m_Name: Bonus Object Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &894808895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894808894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42fd257333c2ef4d83c0de1e2675a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectsToPool: {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732,
+    type: 3}
+  objectsToRandomize:
+  - {fileID: 8597734279833526047, guid: 7e65d46d76626a24d89565b8b71cc09c, type: 3}
+  - {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732, type: 3}
+  - {fileID: 8789025689449529462, guid: c8d9de7016086e847a55bd709ce25aa0, type: 3}
+  - {fileID: 2259647830340931260, guid: 16ee6061705aa654891ffb50e5be6d88, type: 3}
+  amountToPool: 50
+--- !u!4 &894808896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894808894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947506494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,14 +1983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3804185849962138333, guid: 43607cd3a818c784782480db22f980ee,
     type: 3}
-  bonusObject:
-  - {fileID: 8789025689449529462, guid: c8d9de7016086e847a55bd709ce25aa0, type: 3}
-  - {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732, type: 3}
-  - {fileID: 8597734279833526047, guid: 7e65d46d76626a24d89565b8b71cc09c, type: 3}
-  bonusObjectB:
-  - {fileID: 7196444266682849070, guid: a33a55014ff956a40839e6130a146fb9, type: 3}
-  - {fileID: 1222216574371306609, guid: 8943e121252a0b04693199b2bb197374, type: 3}
-  - {fileID: 5407862463549936109, guid: 284faa9a9104a5f44882c59bdcdc20a0, type: 3}
   titleScreen: {fileID: 93705847}
   lives: {fileID: 176162798}
   points: {fileID: 1437395323}
@@ -1951,6 +1995,7 @@ MonoBehaviour:
   maxSpeed: 4
   speed: 1
   floaterPool: {fileID: 622824049}
+  bonusPool: {fileID: 894808895}
 --- !u!4 &1848444896
 Transform:
   m_ObjectHideFlags: 0

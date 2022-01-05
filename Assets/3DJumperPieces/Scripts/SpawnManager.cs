@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject playerPrefab;
-    public GameObject[] bonusObject;
-    public GameObject[] bonusObjectB;
     public GameObject titleScreen;
     public TextMeshProUGUI lives;
     public TextMeshProUGUI points;
@@ -24,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     public float maxSpeed = 4f;
     public float speed = 1f;
     public ObjectPool floaterPool;
+    public ObjectPool bonusPool;
     
     void Start()
     {
@@ -44,7 +43,7 @@ public class SpawnManager : MonoBehaviour
         floaterPool.SpawnObject(spawnPos1);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonus(spawnBonus1);
+            bonusPool.SpawnObject(spawnBonus1);
         }
     }
     void SpawnRowTwo()
@@ -55,7 +54,7 @@ public class SpawnManager : MonoBehaviour
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonus(spawnBonus2);
+            bonusPool.SpawnObject(spawnBonus2);
         }
     }
     void SpawnRowThree()
@@ -66,7 +65,7 @@ public class SpawnManager : MonoBehaviour
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonus(spawnBonus3);
+            bonusPool.SpawnObject(spawnBonus3);
         }
     }
     void SpawnRowFour()
@@ -77,7 +76,7 @@ public class SpawnManager : MonoBehaviour
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonus(spawnBonus4);
+            bonusPool.SpawnObject(spawnBonus4);
         }
     }
     void SpawnRowFive()
@@ -88,7 +87,7 @@ public class SpawnManager : MonoBehaviour
         int canAddBonus = Random.Range(0, 2);
         if (canAddBonus == 1)
         {
-            ChooseRandomBonus(spawnBonus5);
+            bonusPool.SpawnObject(spawnBonus5);
         }
     }
     public void AddPlayer()
@@ -147,7 +146,7 @@ public class SpawnManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void ChooseRandomBonus(Vector3 spawnHere)
+   /* public void ChooseRandomBonus(Vector3 spawnHere)
     {
         int bonusIndex = Random.Range(0, bonusObject.Length);
         Instantiate(bonusObject[bonusIndex], spawnHere, bonusObject[bonusIndex].transform.rotation);
@@ -156,5 +155,5 @@ public class SpawnManager : MonoBehaviour
     {
         int bonusIndex = Random.Range(0, bonusObject.Length);
         Instantiate(bonusObjectB[bonusIndex], spawnHere, bonusObjectB[bonusIndex].transform.rotation);
-    }
+    }*/
 }

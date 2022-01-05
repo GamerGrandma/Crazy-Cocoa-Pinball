@@ -25,12 +25,16 @@ public class ObjectPool : MonoBehaviour
         pooledObjects = new List<GameObject>();
         for (int i = 0; i < amountToPool; i++)
         {
-            pooledObjects.Add(Instantiate(objectsToPool));
+            pooledObjects.Add(ChooseRandomObject());
             pooledObjects[i].SetActive(false);
         }
     }
-    public void ChooseRandomObject()
+    public GameObject ChooseRandomObject()
     {
+        GameObject randomObject;
+        int objectIndex = Random.Range(0, objectsToRandomize.Length);
+        randomObject = Instantiate(objectsToRandomize[objectIndex]);
+        return randomObject;
         //create a random array to get pool list from
     }
     public GameObject SpawnObject(Vector3 position)

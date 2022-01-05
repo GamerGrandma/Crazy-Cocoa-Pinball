@@ -9,7 +9,15 @@ public class BoundaryTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Floater"))
         {
-            Debug.Log("floater in boundary");
+            Debug.Log("object in boundary");
+            other.gameObject.SetActive(false);
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bonus"))
+        {
+            Debug.Log("object in boundary");
             other.gameObject.SetActive(false);
         }
     }

@@ -28,14 +28,14 @@ public class BonusObjects : MonoBehaviour
     public void Move()
     {
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
-            if (transform.position.x > leftBound)
+            /*if (transform.position.x > leftBound)
             {
                 Destroy(gameObject);
             }
             else if (transform.position.x < rightBound)
             {
                 Destroy(gameObject);
-            }
+            }*/
     }
     void OnTriggerEnter(Collider other)
     {
