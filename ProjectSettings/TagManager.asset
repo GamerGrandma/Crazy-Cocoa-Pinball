@@ -18,6 +18,7 @@ TagManager:
   - Floater
   - FloaterB
   - Bonus
+  - Boundary
   layers:
   - Default
   - TransparentFX
