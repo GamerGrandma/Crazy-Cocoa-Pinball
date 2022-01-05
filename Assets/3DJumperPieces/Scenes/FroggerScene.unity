@@ -967,11 +967,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  objectToPool: {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543,
+  objectsToPool: {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5,
     type: 3}
+  objectsToRandomize:
+  - {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543, type: 3}
+  - {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5, type: 3}
   amountToPool: 50
-  bonusToPool: {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732,
-    type: 3}
 --- !u!4 &622824050
 Transform:
   m_ObjectHideFlags: 0

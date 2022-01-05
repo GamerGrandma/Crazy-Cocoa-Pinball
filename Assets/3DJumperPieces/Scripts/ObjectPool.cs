@@ -5,12 +5,11 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     //public static ObjectPool SharedInstance;
-    public List<GameObject> pooledObjects;//pooledAlligators
-    public GameObject objectToPool;//alligators
+    public List<GameObject> pooledObjects;//pool of alligators
+    public GameObject objectsToPool;
+    public GameObject[] objectsToRandomize;//alligators and logs, or bonus and lives.
     public int amountToPool;
     //pooledLogs
-    //logs
-    public GameObject bonusToPool;
     private int nextObject = 0;
 
     void Awake()
@@ -19,16 +18,20 @@ public class ObjectPool : MonoBehaviour
     }
     void Start()
     {
+        CreateObjectPool();
+    }
+    public void CreateObjectPool()
+    {
         pooledObjects = new List<GameObject>();
-        for(int i = 0; i < amountToPool; i++)
+        for (int i = 0; i < amountToPool; i++)
         {
-            pooledObjects.Add(Instantiate(objectToPool));
+            pooledObjects.Add(Instantiate(objectsToPool));
             pooledObjects[i].SetActive(false);
         }
     }
-    void Update()
+    public void ChooseRandomObject()
     {
-        
+        //create a random array to get pool list from
     }
     public GameObject SpawnObject(Vector3 position)
     {
