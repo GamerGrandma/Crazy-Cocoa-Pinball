@@ -7,8 +7,6 @@ public class BonusObjects : MonoBehaviour
     public float minSpeed = 3f;
     public float maxSpeed = 6f;
     public float moveSpeed = 7f;
-    private float leftBound = 28f;
-    private float rightBound = -28f;
     public SpawnManager spawnManager;
     public int pointsToAdd;
     public bool addPoints = false;
@@ -28,14 +26,6 @@ public class BonusObjects : MonoBehaviour
     public void Move()
     {
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
-            /*if (transform.position.x > leftBound)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.x < rightBound)
-            {
-                Destroy(gameObject);
-            }*/
     }
     void OnTriggerEnter(Collider other)
     {

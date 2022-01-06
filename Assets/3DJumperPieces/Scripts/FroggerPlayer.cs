@@ -11,13 +11,14 @@ public class FroggerPlayer : MonoBehaviour
     private Vector3 moveDirection;
     public float gravityScale;
     Vector3 velocity;
-    public float speed = 5f;
+    public float speed = 1f;
     public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    public float jumpHeight = 2f;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     bool isGrounded;
+    bool landedInWater = false;
 
     void Start()
     {
@@ -50,18 +51,24 @@ public class FroggerPlayer : MonoBehaviour
     }
     void PlayerLost()
     {
-        if (transform.position.y < 0)
+        if (landedInWater == true)
         {
             Destroy(gameObject);
             Debug.Log("you lost your life");
             spawnManager.LosePlayerLife(1);
         }
-        else if (transform.position.x > 20 || transform.position.x  < -20)
+        else if (transform.position.x <= -23)
         {
             Destroy(gameObject);
             Debug.Log("you lost your life");
             spawnManager.LosePlayerLife(1);
         }
-        
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            landedInWater = true;
+        }
     }
 }

@@ -7,8 +7,6 @@ public class FloatingMovers : MonoBehaviour
     public float minSpeed = 3f;
     public float maxSpeed = 6f;
     public float moveSpeed = 7f;
-    private float leftBound = 22f;
-    private float rightBound = -22f;
     public SpawnManager spawnManager;
     public GameObject floater;
 

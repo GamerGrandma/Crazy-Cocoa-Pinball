@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9217342586468866318}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.05, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 3, z: 1.5}
   m_Children:
   - {fileID: 5776430061764469805}
@@ -94,10 +94,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.51420325
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.021304607, y: 1.6743194e-18, z: -0.00000007947286}
 --- !u!54 &9217342586468866317
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   maxSpeed: 4
   moveSpeed: 7
   spawnManager: {fileID: 0}
+  floater: {fileID: 0}
 --- !u!65 &8136148292716601397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,8 +142,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.34527078, y: 2.0000005, z: 1.0000002}
-  m_Center: {x: 0.43305683, y: -8.299483e-16, z: -0.00000011920929}
+  m_Size: {x: 0.90089464, y: 2.2774785, z: 1.0000002}
+  m_Center: {x: 0.319795, y: 0.1504751, z: -0.00000011920929}
 --- !u!1001 &5781088471028711581
 PrefabInstance:
   m_ObjectHideFlags: 0

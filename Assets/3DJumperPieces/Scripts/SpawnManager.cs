@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     public TextMeshProUGUI points;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
+    public Button quitButton;
     private float startDelay = 2;
     private float spawnInterval = 2.5f;
     public int numOfLives = 3;
@@ -33,11 +34,11 @@ public class SpawnManager : MonoBehaviour
     {
         AddPlayer();
     }
-    //each spawn row moves opposite direction
-    //also each spawn row sometimes has point or life that spawns with object
+    //each spawn row has a different spawn point.
+    //each spawn row sometimes has point or life that spawns with object
     void SpawnRowOne()
     {
-        int canAddBonus = Random.Range(0, 2);
+        int canAddBonus = Random.Range(0, 4);
         Vector3 spawnPos1 = new Vector3(24, 0, 4);
         Vector3 spawnBonus1 = new Vector3(24, 1, 4);
         floaterPool.SpawnObject(spawnPos1);
@@ -51,7 +52,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos2 = new Vector3(25, 0, 2);
         Vector3 spawnBonus2 = new Vector3(25, 1, 2);
         floaterPool.SpawnObject(spawnPos2);
-        int canAddBonus = Random.Range(0, 2);
+        int canAddBonus = Random.Range(0, 4);
         if (canAddBonus == 1)
         {
             bonusPool.SpawnObject(spawnBonus2);
@@ -62,7 +63,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos3 = new Vector3(23, 0, 0);
         Vector3 spawnBonus3 = new Vector3(23, 1, 0);
         floaterPool.SpawnObject(spawnPos3);
-        int canAddBonus = Random.Range(0, 2);
+        int canAddBonus = Random.Range(0, 4);
         if (canAddBonus == 1)
         {
             bonusPool.SpawnObject(spawnBonus3);
@@ -73,7 +74,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos4 = new Vector3(24, 0, -2);
         Vector3 spawnBonus4 = new Vector3(24, 1, -2);
         floaterPool.SpawnObject(spawnPos4);
-        int canAddBonus = Random.Range(0, 2);
+        int canAddBonus = Random.Range(0, 4);
         if (canAddBonus == 1)
         {
             bonusPool.SpawnObject(spawnBonus4);
@@ -84,7 +85,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos5 = new Vector3(26, 0,-4);
         Vector3 spawnBonus5 = new Vector3(26, 1,-4);
         floaterPool.SpawnObject(spawnPos5);
-        int canAddBonus = Random.Range(0, 2);
+        int canAddBonus = Random.Range(0, 4);
         if (canAddBonus == 1)
         {
             bonusPool.SpawnObject(spawnBonus5);
@@ -106,17 +107,18 @@ public class SpawnManager : MonoBehaviour
             Debug.Log("game over");
             gameOverText.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);
+            quitButton.gameObject.SetActive(true);
         }
     }
     void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Bumper"))
+       /* if (gameObject.CompareTag("Bumper"))
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 Debug.Log("you win");
             }
-        }
+        }*/
     }
     public void LosePlayerLife(int livesToChange)
     {
@@ -146,14 +148,9 @@ public class SpawnManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-   /* public void ChooseRandomBonus(Vector3 spawnHere)
+    public void QuitGame()
     {
-        int bonusIndex = Random.Range(0, bonusObject.Length);
-        Instantiate(bonusObject[bonusIndex], spawnHere, bonusObject[bonusIndex].transform.rotation);
+        Debug.Log("you quit");
+        Application.Quit();
     }
-    public void ChooseRandomBonusRight(Vector3 spawnHere)
-    {
-        int bonusIndex = Random.Range(0, bonusObject.Length);
-        Instantiate(bonusObjectB[bonusIndex], spawnHere, bonusObjectB[bonusIndex].transform.rotation);
-    }*/
 }

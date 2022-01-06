@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 9217342586468866307}
   - component: {fileID: 9217342586468866316}
   - component: {fileID: 9217342586468866317}
-  - component: {fileID: 7672955397242908749}
   - component: {fileID: 2201936217607077391}
+  - component: {fileID: 6878733253341161681}
   m_Layer: 9
   m_Name: LogB
-  m_TagString: FloaterB
+  m_TagString: Floater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9217342586468866318}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalRotation: {x: 0.70710695, y: -0.70710665, z: 0.00000013240826, w: -0.0000001324082}
+  m_LocalPosition: {x: 0.5, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 3, z: 1.5}
   m_Children:
   - {fileID: 4658918741604163055}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: 89.99999}
 --- !u!33 &9217342586468866306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -114,22 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &7672955397242908749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9217342586468866318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a590d7c73afe2f4a8b61e8148b43c11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 4
-  moveSpeed: 7
-  spawnManager: {fileID: 0}
 --- !u!65 &2201936217607077391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,8 +125,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1171359, y: 2.0000005, z: 1.0029696}
-  m_Center: {x: 0.42659402, y: -8.529088e-16, z: 0.0014845849}
+  m_Size: {x: 1.1171359, y: 2.409371, z: 1}
+  m_Center: {x: 0.42659402, y: 0.20468457, z: 0.0014845928}
+--- !u!114 &6878733253341161681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217342586468866318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40fd620d8a82eb43bbfd110d5d6910d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 4
+  maxSpeed: 4
+  moveSpeed: 7
+  spawnManager: {fileID: 0}
+  floater: {fileID: 0}
 --- !u!1001 &4663266538246633823
 PrefabInstance:
   m_ObjectHideFlags: 0
