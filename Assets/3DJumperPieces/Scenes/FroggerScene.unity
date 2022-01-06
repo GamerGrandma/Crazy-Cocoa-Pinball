@@ -1201,7 +1201,7 @@ MonoBehaviour:
   - {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732, type: 3}
   - {fileID: 8789025689449529462, guid: c8d9de7016086e847a55bd709ce25aa0, type: 3}
   - {fileID: 2259647830340931260, guid: 16ee6061705aa654891ffb50e5be6d88, type: 3}
-  amountToPool: 50
+  amountToPool: 40
 --- !u!4 &894808896
 Transform:
   m_ObjectHideFlags: 0
