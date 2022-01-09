@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9217342586468866316}
   - component: {fileID: 9217342586468866317}
   - component: {fileID: 2201936217607077391}
-  - component: {fileID: 6878733253341161681}
+  - component: {fileID: 5131640474954337314}
   m_Layer: 9
   m_Name: LogB
   m_TagString: Floater
@@ -93,7 +93,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 9217342586468866318}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -125,9 +125,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1171359, y: 2.409371, z: 1}
-  m_Center: {x: 0.42659402, y: 0.20468457, z: 0.0014845928}
---- !u!114 &6878733253341161681
+  m_Size: {x: 1.0016707, y: 2.6272132, z: 0.86897725}
+  m_Center: {x: 0.19597077, y: 0.09576385, z: -0.064026795}
+--- !u!114 &5131640474954337314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,12 +136,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9217342586468866318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40fd620d8a82eb43bbfd110d5d6910d, type: 3}
+  m_Script: {fileID: 11500000, guid: e5408065da57c1741b2216d11c8ff840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 4
   maxSpeed: 4
-  moveSpeed: 7
+  moveSpeed: 4
   spawnManager: {fileID: 0}
   floater: {fileID: 0}
 --- !u!1001 &4663266538246633823
@@ -154,6 +154,10 @@ PrefabInstance:
     - target: {fileID: 1609270425926636, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
       propertyPath: m_Name
       value: SM_Tree_Log_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609270425926636, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
+      propertyPath: m_TagString
+      value: Floater
       objectReference: {fileID: 0}
     - target: {fileID: 4659579814028464, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
       propertyPath: m_RootOrder
@@ -177,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4659579814028464, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4659579814028464, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
       propertyPath: m_LocalPosition.z

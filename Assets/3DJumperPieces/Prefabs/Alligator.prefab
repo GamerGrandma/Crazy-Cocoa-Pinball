@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7420813167386035926}
   - component: {fileID: 4873130111935809300}
   - component: {fileID: 6105005703978738866}
-  - component: {fileID: 8457176818891414258}
   - component: {fileID: 8811874746217006628}
+  - component: {fileID: 3178711913464535962}
+  - component: {fileID: 7946230012103124211}
   m_Layer: 9
   m_Name: Alligator
   m_TagString: Floater
@@ -113,21 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &8457176818891414258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284939785691763319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40fd620d8a82eb43bbfd110d5d6910d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 4
-  speed: 1
 --- !u!65 &8811874746217006628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,5 +125,38 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39093533, y: 1.6283021, z: 1}
-  m_Center: {x: 0.37901545, y: 0.019707838, z: 0}
+  m_Size: {x: 0.8155313, y: 1.6283021, z: 0.82242715}
+  m_Center: {x: 0.16671741, y: 0.019707838, z: -0.12927184}
+--- !u!114 &3178711913464535962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284939785691763319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cff6bfcb20957b4c9e59436a72775d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 4
+  maxSpeed: 4
+  moveSpeed: 4
+  spawnManager: {fileID: 0}
+  floater: {fileID: 0}
+  anim: {fileID: 7946230012103124211}
+--- !u!111 &7946230012103124211
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284939785691763319}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 29fb8879731b1a141bce23ea34110abb, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

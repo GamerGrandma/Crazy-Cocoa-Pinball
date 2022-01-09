@@ -25,6 +25,7 @@ public class FloatingMovers : MonoBehaviour
     {
         transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
     }
+    //can ontriggerenter be private virtual?
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

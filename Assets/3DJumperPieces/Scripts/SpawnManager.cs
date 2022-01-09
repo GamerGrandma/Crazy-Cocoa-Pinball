@@ -19,8 +19,8 @@ public class SpawnManager : MonoBehaviour
     public int numOfLives = 3;
     public bool lifeLost = false;
     public int totalPoints = 0;
-    public float minSpeed = 4f;
-    public float maxSpeed = 4f;
+    public float minSpeed = 1f;
+    public float maxSpeed = 1f;
     public float speed = 1f;
     public ObjectPool floaterPool;
     public ObjectPool bonusPool;
@@ -135,11 +135,11 @@ public class SpawnManager : MonoBehaviour
     {
         speed *= difficulty;
         lifeLost = true;
-        InvokeRepeating("SpawnRowOne", startDelay, spawnInterval);
-        InvokeRepeating("SpawnRowTwo", startDelay, spawnInterval);
-        InvokeRepeating("SpawnRowThree", startDelay, spawnInterval);
-        InvokeRepeating("SpawnRowFour", startDelay, spawnInterval);
-        InvokeRepeating("SpawnRowFive", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRowOne", startDelay/difficulty, spawnInterval);
+        InvokeRepeating("SpawnRowTwo", startDelay/difficulty, spawnInterval);
+        InvokeRepeating("SpawnRowThree", startDelay/difficulty, spawnInterval);
+        InvokeRepeating("SpawnRowFour", startDelay/difficulty, spawnInterval);
+        InvokeRepeating("SpawnRowFive", startDelay/difficulty, spawnInterval);
         LosePlayerLife(0);
         AddSomePoints(totalPoints);
         titleScreen.gameObject.SetActive(false);

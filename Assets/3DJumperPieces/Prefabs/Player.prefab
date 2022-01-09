@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePeople_Woman_Doctor_Brown
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f19c9246d91b3d5488c65e0539de4da2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f19c9246d91b3d5488c65e0539de4da2, type: 3}
       propertyPath: m_RootOrder
       value: 1
