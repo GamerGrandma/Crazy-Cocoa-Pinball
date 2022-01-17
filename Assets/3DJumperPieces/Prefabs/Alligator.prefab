@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6105005703978738866}
   - component: {fileID: 8811874746217006628}
   - component: {fileID: 3178711913464535962}
-  - component: {fileID: 7946230012103124211}
+  - component: {fileID: 9121903567725078281}
+  - component: {fileID: 3973892001129687041}
   m_Layer: 9
   m_Name: Alligator
   m_TagString: Floater
@@ -144,9 +145,10 @@ MonoBehaviour:
   moveSpeed: 4
   spawnManager: {fileID: 0}
   floater: {fileID: 0}
-  anim: {fileID: 7946230012103124211}
---- !u!111 &7946230012103124211
-Animation:
+  willGatorDive: 0
+  playableDirector: {fileID: 9121903567725078281}
+--- !u!320 &9121903567725078281
+PlayableDirector:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,9 +156,32 @@ Animation:
   m_GameObject: {fileID: 2284939785691763319}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 29fb8879731b1a141bce23ea34110abb, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_PlayableAsset: {fileID: 11400000, guid: 1a3e95e605904074ebc2b314227e6971, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7908194651484856851, guid: 1a3e95e605904074ebc2b314227e6971, type: 2}
+    value: {fileID: 3973892001129687041}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &3973892001129687041
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284939785691763319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

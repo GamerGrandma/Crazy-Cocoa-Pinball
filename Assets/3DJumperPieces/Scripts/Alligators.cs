@@ -1,27 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Alligators : FloatingMovers
 {
-    public Animation anim;
     public int willGatorDive;
     private float startDelay = 10;
     private float checkInterval = 5f;
+    public PlayableDirector playableDirector;
 
     void Start()
     {
         base.Move();
-        anim = gameObject.GetComponent<Animation>();
         InvokeRepeating("AlligatorDiving", startDelay, checkInterval);
     }
     //override ontriggerenter to start alligator diving instead of invoke repeating
     void AlligatorDiving()
     {
-        willGatorDive = Random.Range(0, 100);
-        if (willGatorDive == 50)
+        willGatorDive = Random.Range(0, 10);
+        if (willGatorDive == 5)
         {
-            anim.Play("DivingGator");
+            Play();
         }
+    }
+    public void Play()
+    {
+        playableDirector.Play();
+        Debug.Log("alligator dives");
     }
 }
