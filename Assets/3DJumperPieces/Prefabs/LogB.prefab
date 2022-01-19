@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9217342586468866316}
   - component: {fileID: 9217342586468866317}
   - component: {fileID: 2201936217607077391}
-  - component: {fileID: 5131640474954337314}
   m_Layer: 9
   m_Name: LogB
   m_TagString: Floater
@@ -127,23 +126,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0016707, y: 2.6272132, z: 0.86897725}
   m_Center: {x: 0.19597077, y: 0.09576385, z: -0.064026795}
---- !u!114 &5131640474954337314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9217342586468866318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5408065da57c1741b2216d11c8ff840, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpeed: 4
-  maxSpeed: 4
-  moveSpeed: 4
-  spawnManager: {fileID: 0}
-  floater: {fileID: 0}
 --- !u!1001 &4663266538246633823
 PrefabInstance:
   m_ObjectHideFlags: 0

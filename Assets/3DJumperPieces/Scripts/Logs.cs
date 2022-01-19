@@ -6,11 +6,11 @@ public class Logs : FloatingMovers
 {
     void Start()
     {
-        
+        //base.Move();
     }
 
     //Do logs need to do something different?
-    void Update()
+    void FixedUpdate()
     {
         base.Move();
     }

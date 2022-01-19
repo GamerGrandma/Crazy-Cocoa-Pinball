@@ -17,13 +17,13 @@ public class FloatingMovers : MonoBehaviour
         moveSpeed = spawnManager.speed;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
     public void Move()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
+        transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
     }
     //can ontriggerenter be private virtual?
     void OnTriggerEnter(Collider other)

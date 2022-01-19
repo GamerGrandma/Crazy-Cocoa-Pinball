@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     //public static ObjectPool SharedInstance;
     public List<GameObject> pooledObjects;//pool of alligators
-    public GameObject objectsToPool;
+    //public GameObject objectsToPool;
     public GameObject[] objectsToRandomize;//alligators and logs, or bonus and lives.
     public int amountToPool;
     //pooledLogs

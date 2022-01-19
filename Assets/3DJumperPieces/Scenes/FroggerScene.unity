@@ -1100,9 +1100,9 @@ MonoBehaviour:
   objectsToPool: {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5,
     type: 3}
   objectsToRandomize:
-  - {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543, type: 3}
-  - {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5, type: 3}
-  - {fileID: 9217342586468866318, guid: b53c6978af56b704e86fad90382b6918, type: 3}
+  - {fileID: 1428964422779823063, guid: 8144c32f147fd854f97c4ada45a7207a, type: 3}
+  - {fileID: 5047621818107250877, guid: c03601ae0e422224db8127fa4ed8f89d, type: 3}
+  - {fileID: 3421916574988017954, guid: 517d9f0ab9daa334297574173f3e929e, type: 3}
   amountToPool: 50
 --- !u!4 &622824050
 Transform:
