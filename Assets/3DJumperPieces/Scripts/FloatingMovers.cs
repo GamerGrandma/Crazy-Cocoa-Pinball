@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class FloatingMovers : MonoBehaviour
 {
-    public float minSpeed = 3f;
-    public float maxSpeed = 6f;
-    public float moveSpeed = 7f;
+    public float moveSpeed;
     public SpawnManager spawnManager;
     public GameObject floater;
 
     void Start()
     {
-        //speed = Random.Range(minSpeed, maxSpeed);
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
-        moveSpeed = spawnManager.speed;
+        moveSpeed = spawnManager.Speed;
     }
     
-    void FixedUpdate()
+    void Update()
     {
         Move();
     }
-    public void Move()
+    //ABSTRACTION method for moving floaters.
+    //POLYMORPHISM method can be overridden in inherited classes.
+    public virtual void Move()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+        transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
     }
     //can ontriggerenter be private virtual?
     void OnTriggerEnter(Collider other)
@@ -36,9 +35,9 @@ public class FloatingMovers : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.transform.parent = null;
-        }
+         if (other.gameObject.CompareTag("Player"))
+         {
+             other.transform.parent = null;
+         }
     }
 }

@@ -31,6 +31,7 @@ public class FroggerPlayer : MonoBehaviour
         MoveAround();
         PlayerLost();
     }
+    //ABSTRACTION method moving the player
     void MoveAround()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -49,6 +50,7 @@ public class FroggerPlayer : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+    //ABSTRACTION method for losing player life
     void PlayerLost()
     {
         if (landedInWater == true)

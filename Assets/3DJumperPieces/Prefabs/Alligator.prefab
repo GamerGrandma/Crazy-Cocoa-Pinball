@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 4873130111935809300}
   - component: {fileID: 6105005703978738866}
   - component: {fileID: 8811874746217006628}
-  - component: {fileID: 9121903567725078281}
-  - component: {fileID: 3973892001129687041}
+  - component: {fileID: 5047817950346018244}
   m_Layer: 9
   m_Name: Alligator
   m_TagString: Floater
@@ -92,7 +91,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2284939785691763319}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -125,43 +124,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8155313, y: 1.6283021, z: 0.82242715}
-  m_Center: {x: 0.16671741, y: 0.019707838, z: -0.12927184}
---- !u!320 &9121903567725078281
-PlayableDirector:
+  m_Size: {x: 0.9571018, y: 1.6283021, z: 0.82242715}
+  m_Center: {x: 0.095932126, y: 0.019707838, z: -0.12927184}
+--- !u!114 &5047817950346018244
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2284939785691763319}
   m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1a3e95e605904074ebc2b314227e6971, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 7908194651484856851, guid: 1a3e95e605904074ebc2b314227e6971, type: 2}
-    value: {fileID: 3973892001129687041}
-  m_ExposedReferences:
-    m_References: []
---- !u!95 &3973892001129687041
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284939785691763319}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cff6bfcb20957b4c9e59436a72775d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  spawnManager: {fileID: 0}
+  floater: {fileID: 0}
+  willGatorDive: 0

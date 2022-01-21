@@ -19,21 +19,27 @@ public class SpawnManager : MonoBehaviour
     public int numOfLives = 3;
     public bool lifeLost = false;
     public int totalPoints = 0;
-    public float minSpeed = 1f;
-    public float maxSpeed = 1f;
-    public float speed = 1f;
+    [SerializeField]
+    private float speed = 1f;
+    //ENCAPSULATION of speed variable
+    public float Speed { get; set; }
     public ObjectPool floaterPool;
     public ObjectPool bonusPool;
-    
+
+    private void Awake()
+    {
+        Speed = speed;
+    }
     void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
+        
     }
 
     void Update()
     {
         AddPlayer();
     }
+    //ABSTRACTION methods to spawn each row of floaters - called by start button.
     //each spawn row has a different spawn point.
     //each spawn row sometimes has point or life that spawns with object
     void SpawnRowOne()
@@ -91,6 +97,7 @@ public class SpawnManager : MonoBehaviour
             bonusPool.SpawnObject(spawnBonus5);
         }
     }
+    //ABSTRACTION method starting a player life
     public void AddPlayer()
     {
         if (numOfLives > 0)
@@ -110,27 +117,20 @@ public class SpawnManager : MonoBehaviour
             quitButton.gameObject.SetActive(true);
         }
     }
-    void OnTriggerEnter(Collider other)
-    {
-       /* if (gameObject.CompareTag("Bumper"))
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("you win");
-            }
-        }*/
-    }
+    //ABSTRACTION method changing number of player lives remaining and text for it.
     public void LosePlayerLife(int livesToChange)
     {
         numOfLives -= livesToChange;
         lives.text = "Lives: " + numOfLives;
         lifeLost = true;
     }
+    //ABSTRACTION method for adding points to total and text.
     public void AddSomePoints(int pointsToAdd)
     {
         totalPoints += pointsToAdd;
         points.text = "Points: " + totalPoints;
     }
+    //ABSTRACTION method for starting the game - implemented by button click.
     public void StartGame(int difficulty)
     {
         speed *= difficulty;
@@ -144,10 +144,12 @@ public class SpawnManager : MonoBehaviour
         AddSomePoints(totalPoints);
         titleScreen.gameObject.SetActive(false);
     }
+    //ABSTRACTION method for button to reload the game if over.
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    //ABSTRACTION method for button to quit the game.
     public void QuitGame()
     {
         Debug.Log("you quit");

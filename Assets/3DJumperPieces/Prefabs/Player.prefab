@@ -94,10 +94,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5157976
-  m_Height: 1.8766637
+  m_Radius: 0.8
+  m_Height: 1.9655211
   m_Direction: 1
-  m_Center: {x: 0, y: 0.061668158, z: -0.015797615}
+  m_Center: {x: 0, y: 0.07890761, z: -0.015797615}
 --- !u!114 &3144479106633381790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +134,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.8
+  m_Radius: 0.8
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -165,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266185928931788174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.05, z: 0}
+  m_LocalPosition: {x: 0, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3804185849962138342}

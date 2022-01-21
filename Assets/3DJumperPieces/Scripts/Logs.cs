@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Logs : FloatingMovers
 {
+    //INHERITANCE from FloatingMovers
     void Start()
     {
         //base.Move();
     }
 
     //Do logs need to do something different?
-    void FixedUpdate()
+    void Update()
     {
         base.Move();
     }

@@ -15,7 +15,7 @@ public class BonusObjects : MonoBehaviour
     {
         //speed = Random.Range(minSpeed, maxSpeed);
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
-        moveSpeed = spawnManager.speed;       
+        moveSpeed = spawnManager.Speed;       
     }
     
     void Update()

@@ -5,28 +5,37 @@ using UnityEngine.Playables;
 
 public class Alligators : FloatingMovers
 {
+    //INHERITANCE from FloatingMovers
     public int willGatorDive;
     private float startDelay = 10;
     private float checkInterval = 5f;
-    public PlayableDirector playableDirector;
+    private float speed = 4f;
 
     void Start()
     {
-        base.Move();
         InvokeRepeating("AlligatorDiving", startDelay, checkInterval);
     }
+    void Update()
+    {
+        Move();
+    }
     //override ontriggerenter to start alligator diving instead of invoke repeating
-    void AlligatorDiving()
+    public void AlligatorDiving()
     {
         willGatorDive = Random.Range(0, 10);
+
+    }
+    //POLYMORHISM overriding Move() method from FloatingMovers
+    public override void Move()
+    {
         if (willGatorDive == 5)
         {
-            Play();
+            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            Debug.Log("alligator dives");
         }
-    }
-    public void Play()
-    {
-        playableDirector.Play();
-        Debug.Log("alligator dives");
+        else
+        {
+            base.Move();
+        }
     }
 }

@@ -1097,12 +1097,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  objectsToPool: {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5,
-    type: 3}
   objectsToRandomize:
-  - {fileID: 1428964422779823063, guid: 8144c32f147fd854f97c4ada45a7207a, type: 3}
-  - {fileID: 5047621818107250877, guid: c03601ae0e422224db8127fa4ed8f89d, type: 3}
-  - {fileID: 3421916574988017954, guid: 517d9f0ab9daa334297574173f3e929e, type: 3}
+  - {fileID: 2284939785691763319, guid: a4554f2e6248c684783124b06a1e6543, type: 3}
+  - {fileID: 9217342586468866318, guid: d25346c10d7bdb04d9dd858f9ffb08b5, type: 3}
+  - {fileID: 9217342586468866318, guid: b53c6978af56b704e86fad90382b6918, type: 3}
   amountToPool: 50
 --- !u!4 &622824050
 Transform:
@@ -1458,8 +1456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  objectsToPool: {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732,
-    type: 3}
   objectsToRandomize:
   - {fileID: 8597734279833526047, guid: 7e65d46d76626a24d89565b8b71cc09c, type: 3}
   - {fileID: 1879166281081809366, guid: a5cd386b8fb5c574a86baf0117d07732, type: 3}
@@ -1478,7 +1474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947506494
 GameObject:
@@ -1988,6 +1984,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323548566}
   m_CullTransparentMesh: 0
+--- !u!1 &1368357991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368357994}
+  - component: {fileID: 1368357993}
+  - component: {fileID: 1368357992}
+  m_Layer: 0
+  m_Name: Bottom Boundary Trigger
+  m_TagString: Boundary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1368357992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368357991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ec3e9d8d5ef24e8007135f14afb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1368357993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368357991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 50, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1368357994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368357991}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1437395321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2186,7 @@ GameObject:
   - component: {fileID: 1509797664}
   - component: {fileID: 1509797663}
   - component: {fileID: 1509797662}
+  - component: {fileID: 1509797666}
   m_Layer: 4
   m_Name: Water
   m_TagString: Water
@@ -2148,10 +2202,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509797661}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1509797663
@@ -2215,6 +2269,19 @@ Transform:
   m_Father: {fileID: 43205559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1509797666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509797661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.5, z: 10}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &1540056629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2389,7 @@ Transform:
   m_LocalScale: {x: 70, y: 0.65, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544025617
 GameObject:
